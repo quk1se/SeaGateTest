@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import FirebaseCore
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
+    func application(_ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions:
+                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+
+        return true
+      }
 
 }
 
